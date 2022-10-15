@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>HTML Lesson</title>
+    <style>
+      label {
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form>
+    <h1 style="position: sticky; top: 0; background-color: white;">REGISTRATION FORM</h1>
+
+    <fieldset>
+      <div>
+        <label for="email">Enter your email address:</label>
+        <input type="email" name="email" autofocus>
+      </div>
+      <div>
+        <label for="password">Choose a secure password:</label>
+        <input type="password" name="password">
+      </div>
+  </fieldset>
+    <br>
+  <fieldset>
+    <legend>Personal Info</legend>
+  <div>    
+      <label for="name">Enter your name:</label>
+      <input type="text" name="name" placeholder="e.g John">
+      <label for="name">Lastname:</label>
+      <input type="text" name="surname" placeholder="e.g Olowookere">
+    </div>
+    <div>
+      <label for="date-o-b">Enter your date of birth</label>
+      <input type="date" name="date-o-b">
+    </div>
+    <div>
+      <label for="phone-no">Telephone number</label>
+      <input type="text" name="phone-no" pattern="[0-9]{11}" placeholder="05xxxxxxxxx">
+    </div>
+  </fieldset>
+    <div>
+      
+      <fieldset>
+        <legend>Choose a plan</legend>
+        <table>
+          <tr>
+            <th>Free Plan</th>
+            <th>Premium Plan</th>
+            <th>Pro Plan</th>
+          </tr>
+
+          <tr>
+            <td>
+              <input type="checkbox" name="free-plan" value="free-plan" checked>
+              <label for="free-plan">Free Plan $0</label>
+            </td>
+            <td><!--Note that I can also use a dropdown (select and options) 
+              but I think this will be more presentable the way I understood the question-->
+              <div>
+                <input type="radio" name="premium-plan" value="cheapest-$10" id="cheapest-$10">
+                <label for="cheapest-$10">Bronze $10</label>
+              </div>
+              <div>
+                <input type="radio" name="premium-plan" value="medium-$20" id="medium-$20">
+                <label for="medium-$20">Silver $20</label>
+              </div>
+              <div>
+                <input type="radio" name="premium-plan" value="high-$50" id="high-$50">
+                <label for="high-$50">Gold $50</label>
+              </div>
+            </td>
+            <td>
+              <input type="checkbox" name="pro-plan" value="pro-$100">
+              <label for="pro-plan">Pro Plan $100</label>
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+    </div>
+<!--I also think the plans should all have "radio"s because a customer should be allowed to get only one 
+  subscription plan. However this was not the case in the question and it demanded we make a 
+  checkbox for the pro plan-->
+
+    <section>
+    <fieldset>
+    <legend>Card Details</legend>
+      <label for="card-number">Enter your credit card number:</label>
+      <input type="text" name="card-number" placeholder="55XX-XXXX-XXXX-XXXX"
+      min="16" max="16" pattern="[0-9]{16}">
+      <label for="cvc">CVC</label>
+      <input type="text" name="cvc" placeholder="e.g 123" 
+      pattern="[0-9]{3}" min="3" max="3">
+      <label for="exp-date">Expiration date</label>
+      <input type="date" name="exp-date">
+      <label for="billing-address">Billing Address</label>
+    <textarea name="billing-address" id="bill-add" style="resize: none; height: 20px; width: 99%;"></textarea>
+    </fieldset>
+  </section><br>
+    <button>Submit</button>
+  </form>
+
+
+  </body>
+</html>
